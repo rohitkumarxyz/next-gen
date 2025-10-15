@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             <h3 className="footer-title">Contact</h3>
             <ul className="footer-links">
               <li><a href="tel:+919555360325">+91-9555360325</a></li>
-              <li><a href="mailto:info@nextgencampus.com">info@nextgencampus.com</a></li>
+              <li><a href="mailto:info@nextgencampus.in">info@nextgencampus.in</a></li>
               <li><Link to="/contact">Contact form</Link></li>
             </ul>
           </div>

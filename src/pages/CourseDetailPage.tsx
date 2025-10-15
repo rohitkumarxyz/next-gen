@@ -135,10 +135,6 @@ const CourseDetailPage: React.FC = () => {
               </div>
 
               <div className="hero-actions">
-                <button className="btn-primary">
-                  <Play size={20} />
-                  Preview Course
-                </button>
                 <button 
                   className={`btn-secondary ${isWishlisted ? 'wishlisted' : ''}`}
                   onClick={() => setIsWishlisted(!isWishlisted)}
@@ -153,9 +149,6 @@ const CourseDetailPage: React.FC = () => {
               <div className="course-card">
                 <div className="course-image">
                   <div className={`image-placeholder ${course.image}`}>
-                    <div className="play-overlay">
-                      <Play size={48} />
-                    </div>
                   </div>
                 </div>
                 
@@ -171,10 +164,10 @@ const CourseDetailPage: React.FC = () => {
                   )}
                 </div>
                 
-                <button className="enroll-btn">
+                <Link to="/contact" className="enroll-btn">
                   <Zap size={20} />
                   Enroll Now
-                </button>
+                </Link>
                 
                 <div className="course-guarantees">
                   <div className="guarantee">

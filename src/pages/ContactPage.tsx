@@ -69,19 +69,8 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="method-content">
                     <h3>Email</h3>
-                    <p>experts@nextgencampus.com</p>
+                    <p>info@nextgencampus.in</p>
                     <span>Response within 24 hours</span>
-                  </div>
-                </div>
-
-                <div className="contact-method">
-                  <div className="method-icon">
-                    <MapPin size={24} />
-                  </div>
-                  <div className="method-content">
-                    <h3>Office</h3>
-                    <p>123 Tech Street, San Francisco, CA 94105</p>
-                    <span>Visit us by appointment</span>
                   </div>
                 </div>
 
