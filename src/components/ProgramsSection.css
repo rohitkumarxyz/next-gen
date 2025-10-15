@@ -235,8 +235,8 @@
 
 .programs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
   align-items: start;
 }
 
@@ -252,8 +252,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 500px;
+  min-height: 450px;
   height: auto;
+  max-width: 100%;
 }
 
 .program-card::before {
@@ -280,7 +281,7 @@
 
 /* Program Image */
 .program-image {
-  height: 240px;
+  height: 200px;
   position: relative;
   overflow: hidden;
 }
@@ -428,7 +429,7 @@
 
 /* Program Content */
 .program-content {
-  padding: 2rem;
+  padding: 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -439,12 +440,18 @@
 }
 
 .program-title {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--neutral-900);
   margin: 0 0 0.75rem 0;
   line-height: 1.3;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2.6rem;
 }
 
 .program-rating {
@@ -485,23 +492,26 @@
 .program-features {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.375rem;
   margin-bottom: 1.5rem;
 }
 
 .feature-badge {
   background: linear-gradient(135deg, var(--primary-100), var(--primary-200));
   color: var(--primary-800);
-  padding: 0.5rem 0.75rem;
-  border-radius: var(--border-radius-lg);
-  font-size: 0.75rem;
+  padding: 0.375rem 0.625rem;
+  border-radius: var(--border-radius-md);
+  font-size: 0.7rem;
   font-weight: 600;
   border: 1px solid var(--primary-300);
   white-space: nowrap;
   display: flex;
   align-items: center;
-  gap: 0.375rem;
+  gap: 0.25rem;
   transition: var(--transition-normal);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .feature-badge:hover {
@@ -512,6 +522,8 @@
 .feature-icon {
   color: var(--success-600);
   font-weight: 700;
+  font-size: 0.6rem;
+  flex-shrink: 0;
 }
 
 /* Program Footer */
@@ -698,8 +710,20 @@
   }
   
   .programs-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  
+  .program-card {
+    min-height: 400px;
+  }
+  
+  .program-image {
+    height: 180px;
+  }
+  
+  .program-content {
+    padding: 1.25rem;
   }
 }
 
@@ -730,68 +754,74 @@
   
   .programs-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
   
   .program-card {
     min-height: auto;
     height: auto;
+    max-width: 100%;
   }
   
   .program-image {
-    height: 200px;
+    height: 160px;
   }
   
   .program-content {
-    padding: 1.5rem;
+    padding: 1.25rem;
     flex: 1;
     display: flex;
     flex-direction: column;
   }
   
   .program-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     margin-bottom: 0.5rem;
+    -webkit-line-clamp: 2;
+    min-height: 2.25rem;
   }
   
   .program-rating {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
   
   .program-description {
     font-size: 0.875rem;
-    line-height: 1.5;
-    -webkit-line-clamp: 4;
-    min-height: 5.25rem;
-    margin-bottom: 1rem;
+    line-height: 1.4;
+    -webkit-line-clamp: 3;
+    min-height: 3.675rem;
+    margin-bottom: 0.75rem;
   }
   
   .program-features {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    gap: 0.375rem;
   }
   
   .feature-badge {
-    font-size: 0.7rem;
-    padding: 0.375rem 0.625rem;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
+    gap: 0.2rem;
   }
   
   .program-footer {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
     align-items: stretch;
     margin-top: auto;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
   }
   
   .view-program-btn {
     width: 100%;
     justify-content: center;
-    padding: 0.875rem 1.5rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
   }
   
   .view-all-btn {
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -823,16 +853,18 @@
   }
   
   .program-image {
-    height: 180px;
+    height: 140px;
   }
   
   .program-content {
-    padding: 1.25rem;
+    padding: 1rem;
   }
   
   .program-title {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.3;
+    -webkit-line-clamp: 2;
+    min-height: 2rem;
   }
   
   .program-rating {
@@ -840,36 +872,37 @@
   }
   
   .program-description {
-    font-size: 0.875rem;
-    line-height: 1.4;
-    -webkit-line-clamp: 3;
-    min-height: 3.675rem;
-    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    -webkit-line-clamp: 2;
+    min-height: 2.08rem;
+    margin-bottom: 0.5rem;
   }
   
   .program-features {
-    margin-bottom: 0.75rem;
-    gap: 0.375rem;
+    margin-bottom: 0.5rem;
+    gap: 0.25rem;
   }
   
   .feature-badge {
-    font-size: 0.65rem;
-    padding: 0.25rem 0.5rem;
+    font-size: 0.55rem;
+    padding: 0.15rem 0.3rem;
+    gap: 0.15rem;
   }
   
   .program-footer {
-    gap: 0.75rem;
-    padding-top: 0.75rem;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
   }
   
   .view-program-btn {
-    padding: 0.75rem 1.25rem;
-    font-size: 0.875rem;
+    padding: 0.625rem 1rem;
+    font-size: 0.8rem;
   }
   
   .view-all-btn {
-    padding: 0.875rem 1.5rem;
-    font-size: 0.875rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -889,36 +922,39 @@
   }
   
   .program-image {
-    height: 160px;
+    height: 120px;
   }
   
   .program-content {
-    padding: 1rem;
+    padding: 0.875rem;
   }
   
   .program-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    -webkit-line-clamp: 2;
+    min-height: 1.8rem;
   }
   
   .program-description {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     -webkit-line-clamp: 2;
-    min-height: 2.4rem;
+    min-height: 1.95rem;
   }
   
   .feature-badge {
-    font-size: 0.6rem;
-    padding: 0.2rem 0.4rem;
+    font-size: 0.5rem;
+    padding: 0.1rem 0.25rem;
+    gap: 0.1rem;
   }
   
   .view-program-btn {
-    padding: 0.625rem 1rem;
-    font-size: 0.8rem;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.75rem;
   }
   
   .view-all-btn {
-    padding: 0.75rem 1.25rem;
-    font-size: 0.8rem;
+    padding: 0.625rem 1rem;
+    font-size: 0.75rem;
   }
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Bell, User, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import './Header.css';
 
 const Header: React.FC = () => {
@@ -16,14 +16,6 @@ const Header: React.FC = () => {
 
   return (
     <header className="header">
-      <div className="header-top">
-        <div className="header-top-right">
-          <ShoppingCart className="header-icon" />
-          <Bell className="header-icon" />
-          <User className="header-icon" />
-        </div>
-      </div>
-      
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-left">

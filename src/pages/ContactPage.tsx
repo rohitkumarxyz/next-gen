@@ -58,7 +58,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="method-content">
                     <h3>Phone</h3>
-                    <p>+1 (800) 123-4567</p>
+                    <p>+91-9555360325</p>
                     <span>Mon-Fri 9AM-6PM EST</span>
                   </div>
                 </div>

@@ -33,8 +33,7 @@ const ProgramsSection: React.FC = () => {
     duration: course.duration,
     university: course.university,
     company: course.company,
-    image: course.image,
-    features: course.features
+    image: course.image
   }));
 
   return (
@@ -93,10 +92,6 @@ const ProgramsSection: React.FC = () => {
                         )}
                         <span className="university-name">{program.university}</span>
                       </div>
-                      <div className="program-badges">
-                        <span className="popular-badge">Popular</span>
-                        <span className="new-badge">New</span>
-                      </div>
                     </div>
                 </div>
                 <div className="program-content">
@@ -109,17 +104,6 @@ const ProgramsSection: React.FC = () => {
                     </div>
                     
                   <p className="program-description">{program.description}</p>
-                    
-                    {program.features && (
-                      <div className="program-features">
-                        {program.features.map((feature, index) => (
-                          <span key={index} className="feature-badge">
-                            <span className="feature-icon">✓</span>
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-                    )}
                     
                     <div className="program-footer">
                       <div className="program-duration">
