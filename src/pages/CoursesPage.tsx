@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, Users, Clock, Search, Filter, Grid, List } from 'lucide-react';
+import { Star, Users, Clock, Search, Grid, List } from 'lucide-react';
 import { courses, categories } from '../data/courses';
 import './CoursesPage.css';
 

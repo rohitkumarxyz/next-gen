@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Play, Users, Award, Clock, User, UserCircle } from 'lucide-react';
+import { ArrowRight, Users, Award, Clock,  UserCircle } from 'lucide-react';
 import './HeroSection.css';
 
 // Import company logos

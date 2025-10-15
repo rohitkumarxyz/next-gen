@@ -5,10 +5,8 @@ import {
   Users, 
   Clock, 
   CheckCircle, 
-  Download, 
   Award,
   ArrowLeft,
-  Calendar,
   Globe,
   BookOpen,
   Target,
@@ -16,14 +14,11 @@ import {
   ChevronDown,
   ChevronUp,
   Heart,
-  Share2,
-  Bookmark,
   Zap,
   Shield,
   Trophy,
   MessageCircle,
   ThumbsUp,
-  ExternalLink
 } from 'lucide-react';
 import { courses } from '../data/courses';
 import './CourseDetailPage.css';

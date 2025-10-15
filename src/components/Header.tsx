@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Search, ShoppingCart, Bell, User, ChevronDown, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ShoppingCart, Bell, User, Menu, X } from 'lucide-react';
 import './Header.css';
 
 const Header: React.FC = () => {
-  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {

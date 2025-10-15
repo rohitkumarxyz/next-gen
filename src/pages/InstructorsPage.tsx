@@ -8,7 +8,6 @@ import {
   Twitter, 
   Globe,
   Search,
-  Filter,
   GraduationCap,
   Briefcase
 } from 'lucide-react';
