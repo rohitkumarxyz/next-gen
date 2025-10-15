@@ -1,0 +1,172 @@
+/* Ratings section - clean, responsive layout */
+.ratings-section {
+  background: #f8fafc;
+  padding: 60px 0;
+}
+
+.ratings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+}
+
+.ratings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.rating-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.rating-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.12);
+  border-color: #3b82f6;
+}
+
+.rating-logo {
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.g2-logo {
+  background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+.trustpilot-logo {
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+}
+
+.course-report-logo {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+}
+
+.rating-number {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  box-shadow: 0 8px 18px rgba(59, 130, 246, 0.2);
+}
+
+.rating-stars {
+  font-size: 1.25rem;
+  color: #f59e0b;
+  letter-spacing: 2px;
+}
+
+.rating-meta {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ratings-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ratings-section {
+    padding: 40px 0;
+  }
+  
+  .ratings-container {
+    padding: 0 16px;
+  }
+  
+  .ratings-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .rating-card {
+    padding: 1.5rem;
+  }
+  
+  .rating-number {
+    width: 70px;
+    height: 70px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ratings-section {
+    padding: 30px 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .rating-card {
+    padding: 1.25rem;
+  }
+  
+  .rating-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.125rem;
+  }
+  
+  .rating-logo {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+  
+  .rating-stars {
+    font-size: 1rem;
+  }
+  
+  .rating-meta {
+    font-size: 0.8rem;
+  }
+}

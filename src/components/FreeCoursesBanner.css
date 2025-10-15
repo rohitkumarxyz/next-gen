@@ -1,0 +1,173 @@
+.free-courses-banner {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 80px 0;
+}
+
+.banner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.banner-left {
+  flex: 1;
+}
+
+.banner-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 32px 0;
+  line-height: 1.3;
+}
+
+.explore-courses-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.explore-courses-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.banner-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 400px;
+}
+
+.image-placeholder {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.people-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.person {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  position: relative;
+}
+
+.person::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+}
+
+.person1 {
+  transform: translateY(-5px);
+}
+
+.person2 {
+  transform: translateY(5px);
+}
+
+.laptop-placeholder {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 120px;
+  height: 80px;
+  background: #6c757d;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.laptop-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 104px;
+  height: 64px;
+  background: #495057;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .banner-title {
+    font-size: 28px;
+  }
+  
+  .image-placeholder {
+    height: 250px;
+    padding: 30px;
+  }
+  
+  .people-group {
+    gap: 15px;
+  }
+  
+  .person {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .person::after {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .laptop-placeholder {
+    width: 100px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .laptop-placeholder::after {
+    width: 84px;
+    height: 44px;
+    top: 6px;
+    left: 6px;
+  }
+}
