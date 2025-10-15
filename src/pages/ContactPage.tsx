@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
+import { Mail, Phone, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
 import './ContactPage.css';
 
 const ContactPage: React.FC = () => {

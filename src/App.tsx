@@ -12,6 +12,11 @@ import BlogPost1 from './pages/BlogPost1';
 import BlogPost2 from './pages/BlogPost2';
 import BlogPost3 from './pages/BlogPost3';
 import ContactPage from './pages/ContactPage';
+import TermsPage from './pages/TermsPage';
+import PrivacyPage from './pages/PrivacyPage';
+import RefundPage from './pages/RefundPage';
+import DisclaimerPage from './pages/DisclaimerPage';
+import FAQPage from './pages/FAQPage';
 
 function App() {
   return (
@@ -29,6 +34,11 @@ function App() {
             <Route path="/blog/2" element={<BlogPost2 />} />
             <Route path="/blog/3" element={<BlogPost3 />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/refund" element={<RefundPage />} />
+            <Route path="/disclaimer" element={<DisclaimerPage />} />
+            <Route path="/faq" element={<FAQPage />} />
         </Routes>
         <Footer />
       </div>

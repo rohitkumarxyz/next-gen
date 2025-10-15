@@ -164,10 +164,10 @@ const CourseDetailPage: React.FC = () => {
                   )}
                 </div>
                 
-                <Link to="/contact" className="enroll-btn">
+                <a href={course.paymentLink} target="_blank" rel="noopener noreferrer" className="enroll-btn">
                   <Zap size={20} />
                   Enroll Now
-                </Link>
+                </a>
                 
                 <div className="course-guarantees">
                   <div className="guarantee">

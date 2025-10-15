@@ -11,6 +11,7 @@ export interface Course {
   company?: string;
   price: number;
   originalPrice?: number;
+  paymentLink: string;
   rating: number;
   studentsCount: number;
   instructor: {
@@ -46,8 +47,9 @@ export const courses: Course[] = [
     university: 'NextGenCampus',
     image: 'complete-web-dev',
     company: 'google',
-    price: 2999,
-    originalPrice: 4999,
+    price: 5000,
+    originalPrice: 7000,
+    paymentLink: 'https://rzp.io/rzp/qwSIDIRX',
     rating: 4.8,
     studentsCount: 15420,
     instructor: {
@@ -100,8 +102,9 @@ export const courses: Course[] = [
     university: 'NextGenCampus',
     image: 'ai-course',
     company: 'netflix',
-    price: 3999,
-    originalPrice: 5999,
+    price: 7500,
+    originalPrice: 10000,
+    paymentLink: 'https://rzp.io/rzp/aOYmYoV',
     rating: 4.9,
     studentsCount: 12850,
     instructor: {
@@ -154,8 +157,9 @@ export const courses: Course[] = [
     university: 'NextGenCampus',
     image: 'computer-networking',
     company: 'ibm',
-    price: 3499,
-    originalPrice: 4999,
+    price: 10000,
+    originalPrice: 13000,
+    paymentLink: 'https://rzp.io/rzp/OT0M2Gmt',
     rating: 4.7,
     studentsCount: 9850,
     instructor: {
@@ -207,8 +211,9 @@ export const courses: Course[] = [
     university: 'NextGenCampus',
     image: 'amazon',
     company: 'amazon',
-    price: 2799,
-    originalPrice: 3999,
+    price: 15000,
+    originalPrice: 18000,
+    paymentLink: 'https://rzp.io/rzp/rd3jEeBO',
     rating: 4.6,
     studentsCount: 11200,
     instructor: {
@@ -259,8 +264,9 @@ export const courses: Course[] = [
     university: 'NextGenCampus',
     image: 'advance-web-dev',
     company: 'microsoft',
-    price: 2499,
-    originalPrice: 3499,
+    price: 20000,
+    originalPrice: 25000,
+    paymentLink: 'https://rzp.io/rzp/bS351X5k',
     rating: 4.5,
     studentsCount: 8750,
     instructor: {
@@ -311,8 +317,9 @@ export const courses: Course[] = [
     university: 'NextGenCampus',
     image: 'advance-programming-fundamentals',
     company: 'stanford',
-    price: 3299,
-    originalPrice: 4499,
+    price: 5000,
+    originalPrice: 7000,
+    paymentLink: 'https://rzp.io/rzp/qwSIDIRX',
     rating: 4.7,
     studentsCount: 6500,
     instructor: {
@@ -364,8 +371,9 @@ export const courses: Course[] = [
     category: 'Web Development',
     university: 'NextGenCampus',
     image: 'advance-web-dev',
-    price: 2199,
-    originalPrice: 2999,
+    price: 7500,
+    originalPrice: 10000,
+    paymentLink: 'https://rzp.io/rzp/aOYmYoV',
     rating: 4.6,
     studentsCount: 8750,
     instructor: {
@@ -414,8 +422,9 @@ export const courses: Course[] = [
     category: 'Web Development',
     university: 'NextGenCampus',
     image: 'complete-web-dev',
-    price: 2499,
-    originalPrice: 3499,
+    price: 10000,
+    originalPrice: 13000,
+    paymentLink: 'https://rzp.io/rzp/OT0M2Gmt',
     rating: 4.5,
     studentsCount: 7200,
     instructor: {
@@ -466,8 +475,9 @@ export const courses: Course[] = [
     category: 'Data Science',
     university: 'NextGenCampus',
     image: 'ai-course',
-    price: 1799,
-    originalPrice: 2499,
+    price: 15000,
+    originalPrice: 18000,
+    paymentLink: 'https://rzp.io/rzp/rd3jEeBO',
     rating: 4.4,
     studentsCount: 11200,
     instructor: {
@@ -516,8 +526,9 @@ export const courses: Course[] = [
     category: 'Data Science',
     university: 'NextGenCampus',
     image: 'ai-course',
-    price: 3799,
-    originalPrice: 4999,
+    price: 20000,
+    originalPrice: 25000,
+    paymentLink: 'https://rzp.io/rzp/bS351X5k',
     rating: 4.8,
     studentsCount: 5600,
     instructor: {
@@ -568,8 +579,9 @@ export const courses: Course[] = [
     category: 'Cybersecurity',
     university: 'NextGenCampus',
     image: 'computer-networking',
-    price: 2899,
-    originalPrice: 3999,
+    price: 5000,
+    originalPrice: 7000,
+    paymentLink: 'https://rzp.io/rzp/qwSIDIRX',
     rating: 4.6,
     studentsCount: 8200,
     instructor: {
@@ -618,8 +630,9 @@ export const courses: Course[] = [
     category: 'Cybersecurity',
     university: 'NextGenCampus',
     image: 'computer-networking',
-    price: 2299,
-    originalPrice: 3199,
+    price: 7500,
+    originalPrice: 10000,
+    paymentLink: 'https://rzp.io/rzp/aOYmYoV',
     rating: 4.3,
     studentsCount: 6800,
     instructor: {
@@ -669,8 +682,9 @@ export const courses: Course[] = [
     category: 'Cloud Computing',
     university: 'NextGenCampus',
     image: 'microsoft',
-    price: 2699,
-    originalPrice: 3699,
+    price: 10000,
+    originalPrice: 13000,
+    paymentLink: 'https://rzp.io/rzp/OT0M2Gmt',
     rating: 4.4,
     studentsCount: 7800,
     instructor: {
@@ -719,8 +733,9 @@ export const courses: Course[] = [
     category: 'Cloud Computing',
     university: 'NextGenCampus',
     image: 'amazon',
-    price: 2999,
-    originalPrice: 4199,
+    price: 15000,
+    originalPrice: 18000,
+    paymentLink: 'https://rzp.io/rzp/rd3jEeBO',
     rating: 4.7,
     studentsCount: 6400,
     instructor: {
@@ -770,8 +785,9 @@ export const courses: Course[] = [
     category: 'Mobile Development',
     university: 'NextGenCampus',
     image: 'advance-web-dev',
-    price: 2799,
-    originalPrice: 3799,
+    price: 20000,
+    originalPrice: 25000,
+    paymentLink: 'https://rzp.io/rzp/bS351X5k',
     rating: 4.5,
     studentsCount: 7200,
     instructor: {
@@ -820,8 +836,9 @@ export const courses: Course[] = [
     category: 'Mobile Development',
     university: 'NextGenCampus',
     image: 'advance-web-dev',
-    price: 2699,
-    originalPrice: 3699,
+    price: 5000,
+    originalPrice: 7000,
+    paymentLink: 'https://rzp.io/rzp/qwSIDIRX',
     rating: 4.4,
     studentsCount: 8900,
     instructor: {
@@ -871,8 +888,9 @@ export const courses: Course[] = [
     category: 'Blockchain',
     university: 'NextGenCampus',
     image: 'advance-programming-fundamentals',
-    price: 2499,
-    originalPrice: 3499,
+    price: 7500,
+    originalPrice: 10000,
+    paymentLink: 'https://rzp.io/rzp/aOYmYoV',
     rating: 4.6,
     studentsCount: 5800,
     instructor: {
@@ -921,8 +939,9 @@ export const courses: Course[] = [
     category: 'Blockchain',
     university: 'NextGenCampus',
     image: 'advance-programming-fundamentals',
-    price: 1999,
-    originalPrice: 2799,
+    price: 10000,
+    originalPrice: 13000,
+    paymentLink: 'https://rzp.io/rzp/OT0M2Gmt',
     rating: 4.3,
     studentsCount: 4200,
     instructor: {

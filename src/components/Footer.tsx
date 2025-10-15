@@ -9,20 +9,21 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-column">
-            <h3 className="footer-title">About</h3>
+            <h3 className="footer-title">Legal</h3>
             <ul className="footer-links">
-              <li><Link to="/about">Who we are</Link></li>
-              <li><Link to="/about">Our mission</Link></li>
-              <li><Link to="/about">Careers</Link></li>
+              <li><Link to="/terms">Terms & Conditions</Link></li>
+              <li><Link to="/privacy">Privacy Policy</Link></li>
+              <li><Link to="/refund">Refund Policy</Link></li>
+              <li><Link to="/disclaimer">Disclaimer</Link></li>
             </ul>
           </div>
 
           <div className="footer-column">
-            <h3 className="footer-title">Courses</h3>
+            <h3 className="footer-title">Support</h3>
             <ul className="footer-links">
-              <li><Link to="/courses">All courses</Link></li>
-              <li><Link to="/courses">Data Science</Link></li>
-              <li><Link to="/courses">AI &amp; ML</Link></li>
+              <li><Link to="/faq">FAQs</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/about">About Us</Link></li>
             </ul>
           </div>
 
@@ -31,7 +32,11 @@ const Footer: React.FC = () => {
             <ul className="footer-links">
               <li><a href="tel:+919555360325">+91-9555360325</a></li>
               <li><a href="mailto:info@nextgencampus.in">info@nextgencampus.in</a></li>
-              <li><Link to="/contact">Contact form</Link></li>
+              <li className="text-gray-300 text-sm leading-relaxed">
+                1016/2, Bhoor Colony,<br />
+                Opp. Sector 29, Faridabad,<br />
+                Haryana - 121002
+              </li>
             </ul>
           </div>
         </div>
@@ -57,8 +62,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="legal-links">
-              <a href="#">Terms</a>
-              <a href="#">Privacy</a>
+              <Link to="/courses">Browse Courses</Link>
             </div>
           </div>
 
