@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HelpCircle, ChevronDown, ChevronUp, MessageCircle, Phone, Mail, MapPin } from 'lucide-react';
+import './FAQPage.css';
 
 const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -121,59 +122,54 @@ const FAQPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="faq-page">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-800 text-white py-16 lg:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-                <HelpCircle className="text-white" size={32} />
-              </div>
+      <div className="faq-hero">
+        <div className="faq-hero-content">
+          <div className="faq-hero-icon">
+            <div>
+              <HelpCircle className="text-white" size={32} />
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-lg sm:text-xl text-indigo-100 max-w-3xl mx-auto leading-relaxed">
-              Find answers to common questions about our courses, platform, and services. Can't find what you're looking for? Contact our support team.
-            </p>
           </div>
+          <h1>
+            Frequently Asked Questions
+          </h1>
+          <p>
+            Find answers to common questions about our courses, platform, and services. Can't find what you're looking for? Contact our support team.
+          </p>
         </div>
       </div>
 
       {/* FAQ Content */}
-      <div className="py-16 lg:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-12">
+      <div className="faq-content">
+        <div className="faq-container">
+          <div className="faq-categories">
             {faqCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 border-b border-gray-200">
-                  <h2 className="text-2xl font-bold text-gray-800">{category.title}</h2>
+              <div key={categoryIndex} className="faq-category-card">
+                <div className="faq-category-header">
+                  <h2>{category.title}</h2>
                 </div>
-                <div className="p-6">
-                  <div className="space-y-4">
+                <div className="faq-category-content">
+                  <div className="faq-items">
                     {category.faqs.map((faq, faqIndex) => {
                       const globalIndex = categoryIndex * 100 + faqIndex;
                       const isOpen = openItems.includes(globalIndex);
                       
                       return (
-                        <div key={faqIndex} className="border border-gray-200 rounded-xl overflow-hidden">
+                        <div key={faqIndex} className="faq-item">
                           <button
                             onClick={() => toggleItem(globalIndex)}
-                            className="w-full p-6 text-left bg-white hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between"
+                            className="faq-question-button"
                           >
-                            <h3 className="text-lg font-semibold text-gray-800 pr-4">{faq.question}</h3>
+                            <h3 className="faq-question">{faq.question}</h3>
                             {isOpen ? (
-                              <ChevronUp className="text-indigo-600 flex-shrink-0" size={24} />
+                              <ChevronUp className="faq-chevron" size={24} />
                             ) : (
-                              <ChevronDown className="text-indigo-600 flex-shrink-0" size={24} />
+                              <ChevronDown className="faq-chevron" size={24} />
                             )}
                           </button>
                           {isOpen && (
-                            <div className="px-6 pb-6">
-                              <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                            </div>
+                            <p className="faq-answer">{faq.answer}</p>
                           )}
                         </div>
                       );
@@ -185,48 +181,48 @@ const FAQPage: React.FC = () => {
           </div>
 
           {/* Contact Support Section */}
-          <div className="mt-16 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-            <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 text-center">
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center">
+          <div className="faq-contact-section">
+            <div className="faq-contact-header">
+              <div className="faq-contact-icon">
+                <div>
                   <MessageCircle className="text-green-600" size={32} />
                 </div>
               </div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Still Have Questions?</h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              <h2>Still Have Questions?</h2>
+              <p>
                 Our support team is here to help you 24/7. Get in touch with us through any of the channels below.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="faq-contact-grid">
+                <div className="faq-contact-item">
+                  <div className="faq-contact-icon-small blue">
                     <Phone className="text-blue-600" size={24} />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Call Us</h3>
-                  <p className="text-gray-600 mb-3">Speak directly with our support team</p>
-                  <a href="tel:+919555360325" className="text-blue-600 font-semibold hover:text-blue-700">
+                  <h3>Call Us</h3>
+                  <p>Speak directly with our support team</p>
+                  <a href="tel:+919555360325">
                     +91-9555360325
                   </a>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="faq-contact-item green">
+                  <div className="faq-contact-icon-small green">
                     <Mail className="text-green-600" size={24} />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Email Us</h3>
-                  <p className="text-gray-600 mb-3">Get detailed responses within 24 hours</p>
-                  <a href="mailto:info@nextgencampus.in" className="text-green-600 font-semibold hover:text-green-700">
+                  <h3>Email Us</h3>
+                  <p>Get detailed responses within 24 hours</p>
+                  <a href="mailto:info@nextgencampus.in">
                     info@nextgencampus.in
                   </a>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="faq-contact-item purple">
+                  <div className="faq-contact-icon-small purple">
                     <MapPin className="text-purple-600" size={24} />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Visit Us</h3>
-                  <p className="text-gray-600 mb-3">Come meet us in person</p>
-                  <p className="text-purple-600 font-semibold text-sm">
+                  <h3>Visit Us</h3>
+                  <p>Come meet us in person</p>
+                  <p>
                     1016/2, Bhoor Colony,<br />
                     Opp. Sector 29, Faridabad,<br />
                     Haryana - 121002
@@ -234,11 +230,11 @@ const FAQPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-gray-50 rounded-xl">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Business Hours</h3>
-                <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM IST</p>
-                <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM IST</p>
-                <p className="text-gray-600">Sunday: Closed</p>
+              <div className="faq-business-hours">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM IST</p>
+                <p>Saturday: 10:00 AM - 4:00 PM IST</p>
+                <p>Sunday: Closed</p>
               </div>
             </div>
           </div>
