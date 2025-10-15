@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="footer-copyright">
-            <p>© 2025 Futurebulls Technologies Pvt. Ltd. All rights reserved.</p>
+            <p>© 2025 Mdm madhubani technologies pvt ltd All rights reserved.</p>
           </div>
         </div>
       </div>
